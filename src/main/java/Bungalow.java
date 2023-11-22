@@ -1,6 +1,6 @@
 import java.time.LocalDate;
 
-public class Bungalow extends Building{
+public class Bungalow extends Building implements ResidentialBuilding{
 
     private boolean central_heating;
     public Bungalow(String companyName,
@@ -14,6 +14,17 @@ public class Bungalow extends Building{
                 5);
         this.central_heating = central_heating;
     }
+
+//    EXTENSION TASK
+//    Overloaded constructor with simplified parameters
+    public Bungalow(String companyName, String location, boolean central_heating){
+        this.companyName = companyName;
+        this.location = location;
+        this.dateOfConstruction = LocalDate.now();
+        this.numberOfRooms = 5;
+        this.central_heating = central_heating;
+    }
+
     @Override
     public String constructionInformation(){
         return "This bungalow was constructed in " + this.dateOfConstruction +
@@ -25,7 +36,7 @@ public class Bungalow extends Building{
         return "This is a " + this.numberOfRooms + " bedroom bungalow.";
     }
 
-    public boolean getCentralHeating() {
+    public boolean hasCentralHeating() {
         return this.central_heating;
     }
 }

@@ -11,10 +11,13 @@ public abstract class Building {
                     String location,
                     LocalDate dateOfConstruction,
                     int numberOfRooms){
-        this.companyName= companyName;
+        this.companyName = companyName;
         this.location = location;
         this.dateOfConstruction = dateOfConstruction;
         this.numberOfRooms = numberOfRooms;
+    }
+
+    public Building(){
     }
 
     public String constructionInformation(){

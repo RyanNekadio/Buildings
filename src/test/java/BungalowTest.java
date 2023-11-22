@@ -28,10 +28,11 @@ public class BungalowTest {
     void hasFurtherInformation(){
         assertThat(bungalow.furtherInformation()).isEqualTo("This is a 5 bedroom bungalow.");
     }
-
+//    EXTENSTION TASK
+//    Test ResidentialBuilding Interface
     @Test
     void hasHeatingInstalled(){
-        assertThat(bungalow.getCentralHeating()).isEqualTo(false);
+        assertThat(bungalow.hasCentralHeating()).isEqualTo(false);
     }
 
 }
